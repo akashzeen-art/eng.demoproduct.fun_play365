@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { TiLocationArrow } from "react-icons/ti";
 
-const VALID = atob("MTExMTExMTExMTE=");
+const VALID = atob("MTExMTExMTExMA==");
 
 const MobilePopup = ({ onConfirm, onClose }) => {
   const [phone, setPhone] = useState("");
@@ -47,14 +47,14 @@ const MobilePopup = ({ onConfirm, onClose }) => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex overflow-hidden rounded-2xl border border-white/20 bg-white/5 focus-within:border-violet-300 transition-colors">
               <div className="flex items-center gap-2 border-r border-white/20 bg-white/5 px-4 py-3">
-                <span className="text-lg">🇧🇷</span>
-                <span className="font-general text-sm font-bold text-white">+55</span>
+                <span className="text-lg">🇮🇳</span>
+                <span className="font-general text-sm font-bold text-white">+91</span>
               </div>
               <input
                 type="tel"
                 value={phone}
                 onChange={(e) => { setPhone(e.target.value.replace(/\D/g, "")); setError(""); }}
-                placeholder="11 99999-9999"
+                placeholder="10 digit mobile number"
                 maxLength={11}
                 className="flex-1 bg-transparent px-4 py-3 font-general text-sm text-white placeholder-white/30 outline-none"
                 autoFocus
